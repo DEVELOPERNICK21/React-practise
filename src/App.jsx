@@ -6,6 +6,7 @@ import Navig from './Dash/navig';
 import Form from './Pages/Form_name';
 import Todo from './Pages/Todo';
 import IncDec from './Pages/Inreament_decreamnet';
+import TodoMaterial from './Pages/ToDo_Material';
 
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
             <Footer />  */}
             {/* <Form /> */}
             {/* <Todo /> */}
-            <IncDec />
+                {/* <IncDec /> */}
+                <TodoMaterial />
         </>
         );
 }

@@ -1,10 +1,10 @@
-* {
+/* * {
   box-sizing: 0;
   padding: 0;
   margin: 0;
   background-color: rgb(180, 255, 251);
   color: #000;
-}
+} */
 
 .Main {
   height: 60vh;
