@@ -13,7 +13,13 @@
 
   height: 100vh;
 
-  background: #7bed9f;
+  /* background: #d4a4eb; */
+
+  background-repeat: no-repeat, repeat;
+
+  background-image: url("./lucifer.jpg");
+
+  background-size: 200vh 100vh;
 
   display: flex;
 
