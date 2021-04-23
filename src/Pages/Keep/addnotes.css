@@ -13,7 +13,7 @@ main {
 
   height: 22vh;
 
-  width: 50vh;
+  width: 52vh;
 
   box-shadow: #45a049;
 
@@ -22,11 +22,11 @@ main {
   /* border-radius: 25px; */
   margin-top: 30px;
 
-  margin-left: 66vh;
+  margin-left: 68vh;
 }
 
 .main_note {
-  background-color: rgb(149, 158, 243);
+  background-color: rgb(185, 227, 255);
 
   border-radius: 25px;
 
@@ -71,11 +71,7 @@ button {
 
 input,
 textarea:hover {
-  background-color: #b5d7ff;
-}
-
-.MuiButtonBase-root:hover {
-  background-color: #5d86b6;
+  background-color: rgb(185, 227, 255);
 }
 
 div.container {
