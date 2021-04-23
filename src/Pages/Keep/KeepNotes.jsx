@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import Form from "react-bootstrap/Form";
 import AddIcon from "@material-ui/icons/Add";
 
-const KeepNote = () => {
+const KeepNote = (props) => {
     const [note, setNote] = useState(
         {
             title: "",
@@ -23,6 +23,11 @@ const KeepNote = () => {
         console.log(note);
     }
 
+    const addEvent = () =>
+    {
+        props.noteHere(note);
+    }
+
 
     return (
         <>
@@ -32,6 +37,7 @@ const KeepNote = () => {
                         <input
                             type='text'
                             name="title"
+                            maxLength="40"
                             value={ note.title}
                             onChange={InputData}
                             placeholder='Title'
@@ -39,12 +45,13 @@ const KeepNote = () => {
                         />
                         <textarea column=''
                             row=''
+                            maxLength="150"
                             name="content"
                             value={note.content }
                             onChange={InputData }
                             placeholder='Enter the notes here!!!'
                         />
-                        <Button variant='contained' color='disabled'>
+                        <Button onClick={addEvent} variant='contained' color='disabled'>
                             <AddIcon />
                         </Button>
                     </form>

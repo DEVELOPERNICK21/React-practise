@@ -5,7 +5,7 @@ const FooterKeep = () =>
     const Year = new Date().getFullYear();
     return(
         <>
-            <footer style={{position: "absolute",
+            <footer style={{position: "fixed",
                             left: 0,
                             bottom: 0,
                             background:"#000",
