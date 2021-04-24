@@ -6,8 +6,9 @@ import './Keepstyle.css'
 import ShowNotes from './ShowNotes';
 
 
-const Keep = () => {
+const Keep = (props) => {
     const [addedNote, setAddedNote] = useState([]);
+    const [show, setShow] = useState(false);
 
     const addNote = (note) => {
         setAddedNote((prevData) => {
@@ -18,12 +19,29 @@ const Keep = () => {
         console.log(note);
     }
 
+    const deleteNote = (id) =>
+    {
+        setAddedNote((oldData) => {
+        return oldData.filter((currData, index)=> {
+            return index !== id;
+        })
+        })
+    }
+
+    const Expand = () => {
+        setShow(true)
+    }
+
+    const CloseExpand = () => {
+        setShow(false)
+    }
+
     return (
         <>
-            <div className='main_div'>
+            <div className='main_div' onDoubleClick={CloseExpand} >
                 <HeaderKeep />
 
-                <KeepNote noteHere={addNote} />
+                <KeepNote noteHere={addNote} first={Expand} second={CloseExpand} third={show} />
 
                
                 <div className="notesstyle">
@@ -31,7 +49,8 @@ const Keep = () => {
                         return (<ShowNotes key={index}
                             id={index}
                             title={val.title}
-                            content={val.content}
+                            content={val.content}   
+                            deleteItem={deleteNote}
                         />);
                     })}
                 </div>

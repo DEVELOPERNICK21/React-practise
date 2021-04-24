@@ -23,37 +23,46 @@ const KeepNote = (props) => {
         console.log(note);
     }
 
-    const addEvent = () =>
-    {
+    const addEvent = () => {
         props.noteHere(note);
+        setNote({
+            title: "",
+            content: "",
+        })
     }
 
 
     return (
         <>
             <main>
-                <div className='container'>
-                    <form>
-                        <input
-                            type='text'
-                            name="title"
-                            maxLength="40"
-                            value={ note.title}
-                            onChange={InputData}
-                            placeholder='Title'
-                            autoComplete='off'
-                        />
+                <div className='container' >
+                    <form >
+                        {props.third ? (
+                            <input
+                                type='text'
+                                name="title"
+                                maxLength="40"
+                                value={note.title}
+                                onChange={InputData}
+                                placeholder='Title'
+                                autoComplete='off'
+                            />) : null}
                         <textarea column=''
                             row=''
                             maxLength="150"
                             name="content"
-                            value={note.content }
-                            onChange={InputData }
+                            value={note.content}
+                            onChange={InputData}
                             placeholder='Enter the notes here!!!'
+                            onClick={props.first}
                         />
-                        <Button onClick={addEvent} variant='contained' color='disabled'>
-                            <AddIcon />
-                        </Button>
+
+                        {props.third ?
+                            (<Button onClick={addEvent} variant='contained' color='disabled'>
+                                <AddIcon />
+                            </Button>
+                            ) : null}
+
                     </form>
                 </div>
             </main>
