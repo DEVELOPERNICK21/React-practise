@@ -8,6 +8,8 @@ import Todo from './Pages/Todo';
 import IncDec from './Pages/Inreament_decreamnet';
 // import TodoMaterial from './Pages/TODO_material/ToDo_Material';
 import Keep from './Pages/Keep/keep';
+import Google_chart from './Pages/google_chart';
+import ComA from './Pages/Context_API/Context1';
 
 
 const App = () => {
@@ -21,7 +23,9 @@ const App = () => {
             {/* <Todo /> */}
                 {/* <IncDec /> */}
                 {/* <TodoMaterial /> */}
-                <Keep />
+                {/* <Keep /> */}
+                {/* <Google_chart /> */}
+                <ComA />
         </>
         );
 }
