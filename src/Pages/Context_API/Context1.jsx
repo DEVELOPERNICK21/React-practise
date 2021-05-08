@@ -11,7 +11,7 @@ const ComA = () =>
         <>
         <FirstName.Provider value={"Nick"}>
         <LastName.Provider value={"Limitless"}>
-        <Theme.Provider value={"red"}>
+        <Theme.Provider value={"red Theme"}>
             <ComB />
         </Theme.Provider>
         </LastName.Provider>
