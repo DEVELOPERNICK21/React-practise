@@ -12,6 +12,7 @@ import Google_chart from './Pages/google_chart';
 import ComA from './Pages/Context_API/Context1';
 import UseEffect from './Pages/Context_API/useEffect';
 import ChangeTitle from './Pages/Context_API/Change_the_title';
+import PokemonApi from './Pages/Context_API/axios';
 
 
 const App = () => {
@@ -28,8 +29,9 @@ const App = () => {
                 {/* <Keep /> */}
                 {/* <Google_chart /> */}
                 {/* <ComA /> */}
-                <UseEffect />
-                <ChangeTitle />
+                {/* <UseEffect />
+                <ChangeTitle /> */}
+                <PokemonApi />
                 
         </>
         );
